@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link rel="icon" href="https://i.pinimg.com/564x/83/b8/6b/83b86b680f951fbf2f7994d1e91ebb5a.jpg">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/stylebutton.css">
+    <link rel="stylesheet" href="/static/css/styletable.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="table-container">
+            <table>
+                <caption>USUARIOS</caption>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo electronico</th>
+                        <th>Es Administrador</th>
+                        <th>Quiere..?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usuario in usuarios %}
+                    <tr>
+                        <td>{{ usuario[0] }}</td>
+                        <td>{{ usuario[1] }}</td>
+                        <td>{{ 'Sí' if usuario[2] == 1 else 'No' }}</td>
+                        <td>
+                            <a href="{{ url_for('delete_usuario', correo=usuario[1]) }}" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">ELIMINAR</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="button-container">
+            <div class="button-container">
+                <a href="{{ url_for('cargar_usuario') }}" class="btn-cargar">NUEVO USUARIO</a>
+            
+                <a href="{{ url_for('data') }}" class="btn-volver">VOLVER</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

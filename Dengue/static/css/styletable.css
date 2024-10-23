@@ -1,0 +1,75 @@
+/* Estilos para el contenedor de la tabla */
+.table-container {
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: auto; /* Agregado para permitir el scroll en la tabla si es necesario */
+    margin-bottom: 20px;
+}
+
+caption {
+    font-size: 1.5em; 
+    color: white; 
+    background-color: black;
+    padding: 10px; 
+    text-align: center; 
+}
+
+/* Estilos para la tabla */
+.table-container table {
+    border-color: white;
+    width: 100%;
+    border-collapse: separate;
+}
+
+/* Estilos para las celdas de arriba de la tabla */
+.table-container th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Estilos para las celdas de la tabla */
+.table-container td {
+    text-align: center;
+    background-color: black;
+    border: 1px solid;
+    color: white;
+    font-size: 16px;
+}
+
+/* Estilos para los botones de editar y eliminar dentro de la tabla */
+.table-container .btn-editar,
+.table-container .btn-eliminar {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-right: 8px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: black;
+    color: white;
+    text-align: left;
+}
+
+/* Estilos para el botón de editar al pasar el mouse */
+.table-container .btn-editar:hover {
+    background-color: blueviolet;
+    transform: scale(1.00);
+}
+
+.table-container .btn-eliminar:hover {
+    background-color: red;
+    transform: scale(1.00);
+}
+
+.titulo{
+    color: black;
+    text-align: center;
+}

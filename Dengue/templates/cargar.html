@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Paciente</title>
+    <link rel="icon" href="https://i.pinimg.com/564x/83/b8/6b/83b86b680f951fbf2f7994d1e91ebb5a.jpg">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/stylebutton.css">
+    <link rel="stylesheet" href="/static/css/styletable.css">
+</head>
+
+<body>
+    <div class="cargar">
+        <form action="{{ url_for('cargar') }}" method="post">
+            <h1>INGRESE LOS DATOS DEL PACIENTE</h1>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" placeholder="Escriba el nombre" required>
+
+            <label for="telefono">Telefono</label>
+            <input type="text" name="telefono" placeholder="Escriba el número de telefono" required>
+
+            <label for="correo">Correo electronico</label>
+            <input type="email" name="correo" placeholder="Escriba el correo electronico" required>
+
+            <label for="grupo">Grupo</label>
+            <select name="grupo" required>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+
+            <label for="sexo">Sexo</label>
+            <select id="opciones" name="sexo">
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Otro">Otro</option>
+                <option value="Helicoptero Boeing AH-64 Apache">Boeing AH-64 Apache</option>
+            </select>
+
+            <label for="edad">Edad</label>
+            <input type="text" name="edad" placeholder="Escriba la Edad" required>
+
+            <label for="localidad">Localidad</label>
+            <input type="text" name="localidad" placeholder="Escriba la localidad" required>
+
+            <label for="direccion">Direccion</label>
+            <input type="text" name="direccion" placeholder="Escriba la direccion" required>
+
+            <button type="submit" class="btn-submit">CARGAR PACIENTE</button>
+            <a href="{{ url_for('data') }}" class="btn-volver">VOLVER</a>
+        </form>
+    </div>
+</body>
+
+</html>

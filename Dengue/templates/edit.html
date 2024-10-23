@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar</title>
+  <link rel="icon" href="https://i.pinimg.com/564x/83/b8/6b/83b86b680f951fbf2f7994d1e91ebb5a.jpg">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/stylebutton.css">
+  <link rel="stylesheet" href="/static/css/styletable.css">
+
+</head>
+
+<body>
+  <div class="edit">
+    <form action="{{ url_for('update_contact', correo=contact[2]) }}" method="post">
+      <h1>MODIFIQUE ALGUN CAMPO</h1>
+      <label for="name">Nombre</label>
+      <input type="text" name="nombre" value="{{ contact[0] }}" placeholder="Escriba el nuevo nombre">
+
+      <label for="number">Telefono</label>
+      <input type="text" name="telefono" value="{{ contact[1] }}" placeholder="Escriba el nuevo número de telefono">
+
+      <label for="email">Correo electronico</label>
+      <input type="text" name="correo" value="{{ contact[2] }}" placeholder="Escriba el nuevo correo electronico">
+
+      <label for="group">Grupo</label>
+      <select id="opciones" name="grupo">
+        <option value="A" {% if contact[3] == 'A' %}selected{% endif %}>A</option>
+        <option value="B" {% if contact[3] == 'B' %}selected{% endif %}>B</option>
+        <option value="C" {% if contact[3] == 'C' %}selected{% endif %}>C</option>
+      </select>
+
+      <label for="sexo">Sexo</label>
+      <select id="opciones" name="sexo">
+        <option value="Hombre" {% if contact[4] == 'Hombre' %}selected{% endif %}>Hombre</option>
+        <option value="Mujer" {% if contact[4] == 'Mujer' %}selected{% endif %}>Mujer</option>
+        <option value="Otro" {% if contact[4] == 'Otro' %}selected{% endif %}>Otro</option>
+        <option value="Boeing AH-64 Apache" {% if contact[4] == 'Boeing AH-64 Apache' %}selected{% endif %}>Helicoptero Boeing AH-64 Apache</option>
+      </select>
+
+      <label for="number">Edad</label>
+      <input type="text" name="edad" value="{{ contact[5] }}" placeholder="Escriba de nuevo la Edad">
+
+      <label for="location">Localidad</label>
+      <input type="text" name="localidad" value="{{ contact[6] }}" placeholder="Escriba la nueva localidad">
+
+      <label for="direccion">Direccion</label>
+      <input type="text" name="direccion" value="{{ contact[7] }}" placeholder="Escriba la nueva direccion">
+
+      <label for="is_admin">Es Administrador</label>
+      <select name="is_admin">
+        <option value="0" {% if contact[8] == 0 %}selected{% endif %}>No</option>
+        <option value="1" {% if contact[8] == 1 %}selected{% endif %}>Sí</option>
+      </select>
+
+      <input type="submit" class="editar-button" value="EDITAR">
+      <a href="{{ url_for('data') }}">VOLVER</a>
+    </form>
+  </div>
+</body>
+
+</html>

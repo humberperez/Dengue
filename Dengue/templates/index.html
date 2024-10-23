@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="https://i.pinimg.com/564x/83/b8/6b/83b86b680f951fbf2f7994d1e91ebb5a.jpg">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/stylebutton.css">
+    <link rel="stylesheet" href="/static/css/styletable.css">
+</head>
+<body>
+    <div class="container">
+        <div class="table-container">
+            <table>
+                <caption>Datos de los Pacientes</caption>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Correo electronico</th>
+                        <th>Grupo</th>
+                        <th>Sexo</th>
+                        <th>Edad</th>
+                        <th>Localidad</th>
+                        <th>Direccion</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for paciente in pacientes %}
+                    <tr>
+                        <td>{{ paciente[0] }}</td>
+                        <td>{{ paciente[1] }}</td>
+                        <td>{{ paciente[2] }}</td>
+                        <td>{{ paciente[3] }}</td>
+                        <td>{{ paciente[4] }}</td>
+                        <td>{{ paciente[5] }}</td>
+                        <td>{{ paciente[6] }}</td>
+                        <td>{{ paciente[7] }}</td>
+                        <td>
+                            <a href="{{ url_for('edit', correo=paciente[2]) }}" class="btn-editar">EDITAR</a>
+                            <a href="{{ url_for('delete_contact', correo=paciente[2]) }}" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">ELIMINAR</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('cargar') }}" class="btn-cargar">NUEVO PACIENTE</a>
+        </div>
+
+        <div class="button-container">
+            <a href="{{ url_for('usuarios') }}" class="btn-cargar">USUARIOS</a>
+        </div>
+
+        <div class="button-container">
+            <a href="{{ url_for('graph') }}" class="btn-cargar">VER GRAFICO</a>
+        </div>
+
+        <div class="logout-container">
+            <a href="{{ url_for('logout') }}" class="btn-logout">Cerrar sesión</a>
+        </div>
+    </div>
+    <section>
+    </section>
+
+</body>
+</html>

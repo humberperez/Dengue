@@ -1,0 +1,213 @@
+/* Estilo del cuerpo del documento */
+body {
+    background-image: url('https://i.pinimg.com/564x/19/18/a7/1918a7bbae67bd48af73a367464e0cd5.jpg');
+    background-size: 100vh;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del contenedor principal del formulario de login */
+.login {
+    background-color:black;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%; /* Ajuste para dispositivos más pequeños */
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los encabezados del formulario */
+.login h1,
+.login h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.login h1 {
+    font-size: 28px;
+    color: white;
+}
+
+.login h3 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las etiquetas del formulario */
+.login label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilos para los campos de texto y contraseña */
+.login input[type="text"],
+.login input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+/* Estilos para el ícono de mostrar/ocultar contraseña */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+/* Estilo para el contenedor de formulario de edición */
+.edit {
+    color: white;
+    background-color: black;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%; /* Ajuste para dispositivos más pequeños */
+    box-sizing: border-box;
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+/* Estilos para los encabezados del formulario de edición */
+.edit h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 28px;
+    color:white;
+}
+
+/* Estilos para las etiquetas del formulario de edición */
+.edit label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilos para los campos de texto y select del formulario de edición */
+.edit input[type="text"],
+.edit select {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Estilo para el encabezado h1 general */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacar el texto */
+}
+
+/* Estilo para el contenedor principal */
+.container {
+    color: black;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Estilos generales para los enlaces */
+a {
+    color: blueviolet;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+a:hover {
+    opacity: 0.7;
+}
+
+/* Estilos para la imagen del usuario 
+.user-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+    PENDIENTE
+*/
+
+/* Estilos para el mensaje de error */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el mensaje de éxito 
+.success-message {
+    color: blueviolet;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+    No funciona,pendiente
+*/
+
+/* Estilo para el contenedor del formulario de carga de paciente */
+.cargar {
+
+    background-color: black;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    margin: auto ;
+    box-sizing: border-box;
+}
+
+/* Estilos para el título del formulario */
+.cargar h1 {
+    text-align: center;
+    margin-top: 0;
+    font-size: 28px;
+    color:white;
+}
+
+/* Estilos para las etiquetas del formulario */
+.cargar label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Estilos para los campos de entrada del formulario */
+.cargar input[type="text"],.cargar input[type="email"],.cargar input[type="password"],.cargar select {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+

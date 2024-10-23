@@ -1,0 +1,170 @@
+/* Estilos para el contenedor del checkbox */
+.checkbox-container {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el checkbox */
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilos para el pseudoelemento del checkbox */
+.checkbox-container input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+/* Estilos para el pseudoelemento del checkbox cuando está marcado */
+.checkbox-container input[type="checkbox"]:checked::before {
+    background-color: blueviolet;
+}
+
+/* Estilos para las etiquetas del checkbox */
+.checkbox-container label {
+    margin-top: 1px;
+    font-size: 16px;
+    color: white;
+}
+
+/* Estilos para el botón de ingresar */
+.login input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+/* Estilos para el botón de ingresar al pasar el mouse */
+.login input[type="submit"]:hover {
+    background-color: blueviolet;
+    transform: scale(1.05);
+}
+
+/* Estilos para el botón de editar y volver del formulario de edición */
+.edit input[type="submit"],
+.edit a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón de editar y volver al pasar el mouse */
+.edit input[type="submit"]:hover,
+.edit a:hover {
+    background-color: blueviolet;
+    transform: scale(1.00);
+}
+
+.logout-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.logout-container .btn-logout {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: padding 0.3s, font-size 0.3s, border-radius 0.3s; 
+}
+
+.logout-container .btn-logout:hover {
+    padding: 14px 28px; 
+    font-size: 20px; 
+    border-radius: 25px; 
+    background-color: red;
+}
+
+
+
+/* Estilos para botones */
+.button-container {
+    text-align: center;
+    margin-top: 40px; 
+}
+
+.button-container .btn-cargar,.btn-volver {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Estilos para el botón de cargar paciente al pasar el mouse */
+
+.button-container .btn-cargar:hover {
+    background-color: blueviolet;
+    transform: scale(1.10);
+}
+.button-container .btn-volver:hover {
+    background-color: blueviolet;
+    transform: scale(1.10);
+}
+
+/* Estilos para el botón de enviar y volver del formulario */
+.cargar button[type="submit"],
+.cargar .btn-volver{
+    width: 100%; 
+    padding: 12px;
+    background-color: blueviolet;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box;
+    margin-bottom: 10px; 
+    display: block; 
+}
+
+/* Estilos para el botón de enviar al pasar el mouse */
+.cargar button[type="submit"]:hover,
+.cargar .btn-volver:hover {
+    
+    transform: scale(1.05);
+}
